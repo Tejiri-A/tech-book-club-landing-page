@@ -7,5 +7,93 @@
     <title>Frontend Mentor | Tech book club</title>
     <script defer type="module" src="/src/main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__logo-container">
+          <img src="./src/assets/images/logo.svg" alt="Tech Book Club Logo" />
+        </div>
+        <div class="hero__flex-container">
+          <div class="hero__content">
+            <div class="hero__intro">
+              <h1 class="heading-hero">Join the ultimate tech book club</h1>
+              <p class="body">
+                Turn your reading time into learning time with fellow tech
+                enthusiasts. Get curated recommendations, join vibrant
+                discussions, and level up your skills one chapter at a time.
+              </p>
+            </div>
+            <div class="hero__cta">
+              <button type="button" class="btn btn--primary">
+                <span>REVIEW MEMBERSHIP OPTIONS</span>
+                <img src="./src/assets/images/icon-arrow-down.svg" alt="" />
+              </button>
+              <div class="hero__testimonials">
+                <div class="hero__testimonials-images">
+                  <img
+                    src="./src/assets/images/image-avatars.webp"
+                    width="110"
+                    height="40"
+                    alt=""
+                    class="hero__testimonials-img"
+                  />
+                </div>
+                <div class="hero__testimonials-stats">
+                  <div class="hero__testimonial-rating">
+                    <img
+                      src="./src/assets/images/icon-star.svg"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                    <img
+                      src="./src/assets/images/icon-star.svg"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                    <img
+                      src="./src/assets/images/icon-star.svg"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                    <img
+                      src="./src/assets/images/icon-star.svg"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                    <img
+                      src="./src/assets/images/icon-star.svg"
+                      alt=""
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <p class="text-neutral-700 caption">
+                    200+ developers joined already
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__img">
+            <picture>
+              <source
+                media="(min-width: 1440px)"
+                src="./src/assets/images/image-hero-desktop.webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                src="./src/assets/images/image-hero-tablet.webp"
+              />
+              <img src="./src/assets/images/image-hero-mobile.webp" alt="" />
+            </picture>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

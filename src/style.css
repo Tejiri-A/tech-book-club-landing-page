@@ -183,10 +183,16 @@ picture {
   display: block;
 }
 
-/* Inherit fonts for buttons */
+img {
+  object-fit: cover;
+}
+
+/* Inherit fonts for buttons and reset button styles */
 button {
   font-family: inherit;
   font-size: inherit;
+  border: none;
+  background: transparent;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
@@ -204,6 +210,9 @@ button {
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-120);
   letter-spacing: var(--letter-spacing-2px);
+  background: var(--text-gradient);
+  background-clip: text;
+  color: transparent;
 }
 
 .heading-secondary {
@@ -233,6 +242,7 @@ button {
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-140);
   letter-spacing: var(--letter-spacing-half);
+  color: var(--color-neutral-700);
 }
 
 .label {
@@ -350,3 +360,130 @@ button {
 /* ####################################### */
 /* COMPONENT STYLES */
 /* ####################################### */
+.btn {
+  padding: var(--spacing-250) var(--spacing-300);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-200);
+  align-self: flex-start;
+  border-radius: var(--radius-8);
+}
+
+.btn--primary {
+  color: var(--color-neutral-900);
+  box-shadow: inset 0 0 0 2px var(--color-neutral-900);
+  background: var(--color-light-salmon-50);
+
+  &:hover,
+  &:focus {
+    background: var(--gradient);
+  }
+
+  &:focus {
+    outline: solid var(--color-neutral-700);
+    outline-offset: 3px;
+    outline-width: 2px;
+  }
+}
+
+.btn--secondary {
+  --gradient: linear-gradient(
+    to right,
+    var(--color-neutral-700) 0%,
+    var(--color-neutral-900) 100%
+  );
+  color: var(--color-neutral-0);
+  box-shadow: inset 0 0 0 2px var(--color-neutral-0);
+  background: var(--color-neutral-900);
+
+  &:hover,
+  &:focus {
+    background: var(--gradient);
+  }
+
+  &:focus {
+    outline: solid var(--color-neutral-700);
+    outline-offset: 3px;
+    outline-width: 2px;
+  }
+}
+
+/* ####################################### */
+/* MAIN STYLES */
+/* ####################################### */
+.hero {
+  padding: var(--spacing-300) var(--spacing-200) var(--spacing-1000);
+  display: grid;
+  gap: var(--spacing-500);
+  background: url("./assets/images/pattern-light-bg.svg") center/cover no-repeat;
+
+  @media screen and (min-width: 48em) {
+    padding: var(--spacing-400) var(--spacing-400) var(--spacing-1000);
+    gap: var(--spacing-800);
+  }
+
+  @media screen and (min-width: 90em) {
+    padding: var(--spacing-400) 8.4375rem var(--spacing-1000);
+    gap: var(--spacing-1000);
+  }
+}
+
+.hero__flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-600);
+
+  @media screen and (min-width: 90em) {
+    flex-direction: row;
+    gap: var(--spacing-800);
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+  justify-content: center;
+}
+
+.hero__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-250);
+}
+
+.hero__cta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-250);
+
+  .btn > span {
+    text-wrap: nowrap;
+  }
+}
+
+.hero__testimonials {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-150);
+}
+
+.hero__testimonials-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-050);
+}
+
+.hero__testimonial-rating {
+  display: flex;
+}
+
+.hero__img {
+  flex: 1 0 50%;
+}
+
+.hero__img picture,
+.hero__img img {
+  height: 100%;
+  width: 100%;
+}
