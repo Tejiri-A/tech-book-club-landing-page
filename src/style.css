@@ -360,6 +360,10 @@ ul {
   background: var(--gradient);
 }
 
+.flex-start {
+  align-self: flex-start;
+}
+
 /* ####################################### */
 /* COMPONENT STYLES */
 /* ####################################### */
@@ -367,8 +371,8 @@ ul {
   padding: var(--spacing-250) var(--spacing-300);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-200);
-  align-self: flex-start;
   border-radius: var(--radius-8);
 }
 
@@ -679,8 +683,8 @@ ul {
   }
 }
 
-.reading-journey__step::after{
-  content: '';
+.reading-journey__step::after {
+  content: "";
   width: 76.64px;
   height: 20.51px;
   background: url(./assets/images/pattern-arrow.svg) center/cover no-repeat;
@@ -707,4 +711,68 @@ ul {
     width: var(--spacing-500);
     height: var(--spacing-500);
   }
+}
+
+/* Membership options */
+.membership {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  padding-inline: var(--spacing-200);
+  width: min(100%, 60.625rem);
+  margin-inline: auto;
+
+  @media screen and (min-width: 48em) {
+    gap: var(--spacing-500);
+    padding-inline: var(--spacing-400);
+  }
+  @media screen and (min-width: 90em) {
+    gap: var(--spacing-800);
+    padding-inline: 0;
+  }
+}
+
+.membership__options {
+  display: grid;
+  gap: var(--spacing-300);
+  grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+  align-items: center;
+}
+
+.membership__option {
+  padding: var(--spacing-300);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+  border-radius: var(--radius-8);
+  border: 1px solid var(--color-neutral-200);
+
+  @media screen and (min-width: 48em) {
+    padding: var(--spacing-300);
+  }
+}
+
+.membership__option--secondary {
+  background-image: url(./assets/images/pattern-glow.svg);
+  background-color: var(--color-neutral-100);
+
+  @media screen and (min-width: 60.625em) {
+    padding: var(--spacing-500) var(--spacing-300);
+  }
+}
+
+.membership__option-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+
+.membership__option-price {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+}
+
+.divider {
+  border: 1px solid var(--color-neutral-200);
 }
