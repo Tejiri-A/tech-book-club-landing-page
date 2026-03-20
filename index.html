@@ -5,6 +5,35 @@
     <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Tech book club</title>
+    <link
+      rel="preload"
+      href="/fonts/Inter-Regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Inter-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/MartianMono-SemiExpandedRegular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/MartianMono-SemiExpandedRegular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="./src/main.js" as="script" />
     <script defer type="module" src="/src/main.js"></script>
   </head>
   <body>
@@ -31,7 +60,12 @@
             <div class="hero__cta">
               <button type="button" class="flex-start btn btn--primary">
                 <span>REVIEW MEMBERSHIP OPTIONS</span>
-                <img src="./src/assets/images/icon-arrow-down.svg" alt="" />
+                <img
+                  src="./src/assets/images/icon-arrow-down.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
               </button>
               <div class="hero__testimonials">
                 <div class="hero__testimonials-images">
@@ -88,13 +122,19 @@
             <picture>
               <source
                 media="(min-width: 1440px)"
-                src="./src/assets/images/image-hero-desktop.webp"
+                srcset="./src/assets/images/image-hero-desktop.webp"
               />
               <source
                 media="(min-width: 768px)"
-                src="./src/assets/images/image-hero-tablet.webp"
+                srcset="./src/assets/images/image-hero-tablet.webp"
               />
-              <img src="./src/assets/images/image-hero-mobile.webp" alt="" />
+              <img
+                src="./src/assets/images/image-hero-mobile.webp"
+                alt="An image of three people studying together"
+                width="606"
+                height="774"
+                fetchpriority="high"
+              />
             </picture>
           </div>
         </div>
@@ -123,15 +163,17 @@
             <picture>
               <source
                 media="(min-width: 1440px)"
-                src="./src/assets/images/image-read-together-desktop.webp"
+                srcset="./src/assets/images/image-read-together-desktop.webp"
               />
               <source
                 media="(min-width: 768px)"
-                src="./src/assets/images/image-read-together-tablet.webp"
+                srcset="./src/assets/images/image-read-together-tablet.webp"
               />
               <img
                 src="./src/assets/images/image-read-together-mobile.webp"
-                alt=""
+                alt="An image group of people studying together"
+                width="686"
+                height="638"
               />
             </picture>
           </div>
@@ -163,15 +205,17 @@
             <picture>
               <source
                 media="(min-width: 1440px)"
-                src="./src/assets/images/image-not-average-desktop.webp"
+                srcset="./src/assets/images/image-not-average-desktop.webp"
               />
               <source
                 media="(min-width: 768px)"
-                src="./src/assets/images/image-not-average-tablet.webp"
+                srcset="./src/assets/images/image-not-average-tablet.webp"
               />
               <img
                 src="./src/assets/images/image-not-average-mobile.webp"
-                alt=""
+                alt="An image of group of people studying together"
+                width="686"
+                height="638"
               />
             </picture>
           </div>
@@ -210,10 +254,10 @@
                 <span class="body">/month</span>
               </div>
               <hr class="divider" />
-              <div class="features__list">
+              <ul class="features__list">
                 <li class="feature body">1 book/month</li>
                 <li class="feature body">Online forums</li>
-              </div>
+              </ul>
             </div>
             <button class="btn btn--primary">SUSCRIBE NOW</button>
           </div>
@@ -227,10 +271,10 @@
                 <span class="body">/month</span>
               </div>
               <hr class="divider" />
-              <div class="features__list">
+              <ul class="features__list">
                 <li class="feature body">2 books/month</li>
                 <li class="feature body">Virtual meetups</li>
-              </div>
+              </ul>
             </div>
             <button class="btn btn--primary">SUSCRIBE NOW</button>
           </div>
@@ -243,10 +287,10 @@
                 <h3 class="heading-tertiary">Custom</h3>
               </div>
               <hr class="divider" />
-              <div class="features__list">
+              <ul class="features__list">
                 <li class="feature body">Team access</li>
                 <li class="feature body">Private sessions</li>
-              </div>
+              </ul>
             </div>
             <button class="btn btn--primary">TALK TO US</button>
           </div>
@@ -303,7 +347,12 @@
         <div class="footer__cta">
           <button class="btn btn--secondary">
             <span>REVIEW MEMBERSHIP OPTIONS</span>
-            <img src="./src/assets/images/icon-arrow-up.svg" alt="" />
+            <img
+              src="./src/assets/images/icon-arrow-up.svg"
+              alt=""
+              width="22"
+              height="22"
+            />
           </button>
           <div class="hero__testimonials">
             <div class="hero__testimonials-images">
@@ -356,10 +405,22 @@
         </div>
       </div>
       <div class="footer__content">
-        <p class="text-neutral-0 text-center caption">© <span id="date">2024</span> – Tech Book Club</p>
+        <p class="text-neutral-0 text-center caption">
+          © <span id="date">2024</span> – Tech Book Club
+        </p>
         <div class="social-media">
-          <img src="./src/assets/images/logo-bluesky.svg" alt="bluesky logo" width="22" height="22">
-          <img src="./src/assets/images/logo-linkedin.svg" alt="bluesky logo" width="22" height="22">
+          <img
+            src="./src/assets/images/logo-bluesky.svg"
+            alt="bluesky logo"
+            width="22"
+            height="22"
+          />
+          <img
+            src="./src/assets/images/logo-linkedin.svg"
+            alt="bluesky logo"
+            width="22"
+            height="22"
+          />
         </div>
       </div>
     </footer>

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Martian Mono SemiExpanded";
   src:
-    url("../public/fonts/MartianMono-SemiExpandedRegular.woff2") format("woff2"),
-    url("../public/fonts/MartianMono-SemiExpandedRegular.woff") format("woff");
+    url("/fonts/MartianMono-SemiExpandedRegular.woff2") format("woff2"),
+    url("fonts/MartianMono-SemiExpandedRegular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -11,8 +11,8 @@
 @font-face {
   font-family: "Inter";
   src:
-    url("../public/fonts/Inter-Regular.woff2") format("woff2"),
-    url("../public/fonts/Inter-Regular.woff") format("woff");
+    url("/fonts/Inter-Regular.woff2") format("woff2"),
+    url("/fonts/Inter-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -549,6 +549,7 @@ ul {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: var(--radius-10);
 }
 
 /* Features */
