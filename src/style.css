@@ -486,7 +486,15 @@ ul {
   padding: var(--spacing-300) var(--spacing-200) var(--spacing-1000);
   display: grid;
   gap: var(--spacing-500);
-  background: url("./assets/images/pattern-light-bg.svg") center/cover no-repeat;
+  background:
+    url(./assets/images/pattern-light-bg.svg) no-repeat,
+    url(./assets/images/pattern-glow.svg) no-repeat,
+    var(--color-neutral-100);
+  background-position:
+    center,
+    bottom -200px right -390px,
+    center;
+  background-size: cover, 684px, cover;
 
   @media screen and (min-width: 48em) {
     padding: var(--spacing-400) var(--spacing-400) var(--spacing-1000);
