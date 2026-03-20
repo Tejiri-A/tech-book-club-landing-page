@@ -416,7 +416,7 @@ ul {
   flex-direction: column;
   gap: var(--spacing-500);
 
-  @media screen and (min-width: 90em) {
+  @media screen and (min-width: 75em) {
     flex-direction: row;
     gap: var(--spacing-1000);
     align-items: center;
@@ -439,8 +439,9 @@ ul {
   }
 }
 
-.row-reverse{
-  flex-direction: row-reverse;
+
+.relative{
+  position: relative;
 }
 
 /* ####################################### */
@@ -538,12 +539,12 @@ ul {
 
 /* Features */
 .features .section_flex-container{
-  @media screen and (min-width: 90em) {
+  @media screen and (min-width: 75em) {
     flex-direction: row-reverse;
   }
 }
 
-.features__text-content {
+.section_text-content {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-250);
@@ -570,10 +571,11 @@ ul {
   width: var(--spacing-300);
   height: var(--spacing-300);
   background: url("./assets/images/icon-check.svg") center/cover no-repeat;
+  flex: 0 0 auto;
 }
 
-.section_flex-container div:nth-child(2) picture,
-.section_flex-container div:nth-child(2) img {
+.section_flex-container .section__img picture,
+.section_flex-container .section__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -584,5 +586,33 @@ ul {
   }
   @media screen and (min-width: 90em) {
     border-radius: var(--radius-20);
+  }
+}
+
+/* About section */
+.about-club{
+  position: relative;
+}
+.about-club::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -4px;
+  right: 0;
+  bottom: 0;
+  width: 120%;
+  height: 100%;
+  background: url(./assets/images/pattern-circle.png) center/contain no-repeat;
+}
+
+.tech-logos{
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+
+  @media screen and (min-width: 90em) {
+    display: block;
   }
 }
