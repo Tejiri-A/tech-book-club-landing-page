@@ -5,13 +5,11 @@
     <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Tech book club</title>
-    <link
-      rel="preload"
-      href="/fonts/Inter-Regular.woff"
-      as="font"
-      type="font/woff"
-      crossorigin
+    <meta
+      name="description"
+      content="Join the ultimate tech book club and turn your reading time into learning time with fellow tech enthusiasts. Get curated recommendations, join vibrant discussions, and level up your skills one chapter at a time."
     />
+
     <link
       rel="preload"
       href="/fonts/Inter-Regular.woff2"
@@ -19,13 +17,7 @@
       type="font/woff2"
       crossorigin
     />
-    <link
-      rel="preload"
-      href="/fonts/MartianMono-SemiExpandedRegular.woff"
-      as="font"
-      type="font/woff"
-      crossorigin
-    />
+
     <link
       rel="preload"
       href="/fonts/MartianMono-SemiExpandedRegular.woff2"
@@ -33,20 +25,28 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="preload" href="./src/main.js" as="script" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content=Frontend Mentor | Tech book club>
+    <meta property="og:site_name" content=Tech book club>
+    <meta property="og:url" content=https://tech-book-hub.netlify.app/>
+    <meta property="og:description" content=Join the ultimate tech book club and turn your reading time into learning time with fellow tech enthusiasts. Get curated recommendations, join vibrant discussions, and level up your skills one chapter at a time.>
+    <meta property="og:type" content=website>
+    <meta property="og:image" content=https://tech-book-hub.netlify.app//assets/image-hero-mobile-vObgbxvA.webp>
+
     <script defer type="module" src="/src/main.js"></script>
   </head>
   <body>
     <main class="main">
       <section class="hero">
-        <div class="hero__logo-container">
+        <header class="hero__logo-container">
           <img
             src="./src/assets/images/logo.svg"
             alt="Tech Book Club Logo"
             width="193"
             height="36"
           />
-        </div>
+        </header>
         <div class="hero__flex-container">
           <div class="hero__content">
             <div class="hero__intro">
@@ -174,6 +174,7 @@
                 alt="An image group of people studying together"
                 width="686"
                 height="638"
+                loading="lazy"
               />
             </picture>
           </div>
@@ -199,6 +200,7 @@
               alt=""
               width="120"
               height="138"
+              loading="lazy"
             />
           </div>
           <div class="section__img">
@@ -216,6 +218,7 @@
                 alt="An image of group of people studying together"
                 width="686"
                 height="638"
+                loading="lazy"
               />
             </picture>
           </div>
@@ -246,9 +249,9 @@
         <h2 class="heading-secondary">Membership options</h2>
         <div class="membership__options">
           <!-- STARTER -->
-          <div class="membership__option">
+          <article class="membership__option">
             <div class="membership__option-details">
-              <span class="overline">Starter</span>
+              <h4 class="overline">Starter</h4>
               <div class="membership__option-price">
                 <h3 class="heading-tertiary">$19</h3>
                 <span class="body">/month</span>
@@ -259,13 +262,13 @@
                 <li class="feature body">Online forums</li>
               </ul>
             </div>
-            <button class="btn btn--primary">SUSCRIBE NOW</button>
-          </div>
+            <button class="btn btn--primary">SUBSCRIBE NOW</button>
+          </article>
 
           <!-- PRO -->
-          <div class="membership__option membership__option--secondary">
+          <article class="membership__option membership__option--secondary">
             <div class="membership__option-details">
-              <span class="overline">Pro</span>
+              <h4 class="overline">Pro</h4>
               <div class="membership__option-price">
                 <h3 class="heading-tertiary">$29</h3>
                 <span class="body">/month</span>
@@ -276,13 +279,13 @@
                 <li class="feature body">Virtual meetups</li>
               </ul>
             </div>
-            <button class="btn btn--primary">SUSCRIBE NOW</button>
-          </div>
+            <button type="button" class="btn btn--primary">SUBSCRIBE NOW</button>
+          </article>
 
           <!-- ENTREPRISE -->
-          <div class="membership__option">
+          <article class="membership__option">
             <div class="membership__option-details">
-              <span class="overline">Entreprise</span>
+              <h4 class="overline">Entreprise</h4>
               <div class="membership__option-price">
                 <h3 class="heading-tertiary">Custom</h3>
               </div>
@@ -292,12 +295,12 @@
                 <li class="feature body">Private sessions</li>
               </ul>
             </div>
-            <button class="btn btn--primary">TALK TO US</button>
-          </div>
+            <button type="button" class="btn btn--primary">TALK TO US</button>
+          </article>
         </div>
       </section>
       <section class="testimonial">
-        <div class="testimonial__rating">
+        <div class="testimonial__rating" aria-label="Rated 5 out of 5 stars">
           <img
             src="./src/assets/images/icon-star.svg"
             alt=""
@@ -362,10 +365,14 @@
                 height="40"
                 alt=""
                 class="hero__testimonials-img"
+                loading="lazy"
               />
             </div>
             <div class="hero__testimonials-stats">
-              <div class="hero__testimonial-rating">
+              <div
+                class="hero__testimonial-rating"
+                aria-label="Rated 5 out of 5 stars"
+              >
                 <img
                   src="./src/assets/images/icon-star.svg"
                   alt=""
@@ -409,18 +416,22 @@
           © <span id="date">2024</span> – Tech Book Club
         </p>
         <div class="social-media">
-          <img
+          <a href="https://bsky.app/" aria-label="Bluesky" referrerpolicy="no-referrer" target="_blank">
+            <img
             src="./src/assets/images/logo-bluesky.svg"
             alt="bluesky logo"
             width="22"
             height="22"
           />
+        </a>
+        <a href="https://www.linkedin.com/" referrerpolicy="no-referrer" target="_blank">
           <img
             src="./src/assets/images/logo-linkedin.svg"
-            alt="bluesky logo"
+            alt="linkedin logo"
             width="22"
             height="22"
           />
+        </a>
         </div>
       </div>
     </footer>

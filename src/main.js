@@ -1,5 +1,7 @@
 import "./style.css";
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("date").innerText = new Date().getFullYear();
+  const dateElement = document.getElementById("date");
+  if (!dateElement) return null;
+  dateElement.innerText = new Date().getFullYear();
 });

@@ -2,7 +2,7 @@
   font-family: "Martian Mono SemiExpanded";
   src:
     url("/fonts/MartianMono-SemiExpandedRegular.woff2") format("woff2"),
-    url("fonts/MartianMono-SemiExpandedRegular.woff") format("woff");
+    url("/fonts/MartianMono-SemiExpandedRegular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -74,8 +74,8 @@
   --radius-999: 62.4375rem;
 
   /* Font Families */
-  --font-family-martian: "Martian Mono SemiExpanded";
-  --font-family-inter: "Inter";
+  --font-family-martian: "Martian Mono SemiExpanded", monospace;
+  --font-family-inter: "Inter", sans-serif;
 
   /* Font Weights */
   --font-weight-regular: 400;
@@ -192,6 +192,7 @@ button {
   font-family: inherit;
   font-size: inherit;
   border: none;
+  cursor: pointer;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
@@ -379,6 +380,7 @@ ul {
   gap: var(--spacing-200);
   border-radius: var(--radius-8);
   text-wrap: nowrap;
+  transition: all 0.3s ease;
 }
 
 .btn--primary {
@@ -462,11 +464,11 @@ ul {
 .main {
   display: grid;
   gap: var(--spacing-800);
-  margin-bottom: var(--spacing-800);
+  margin-block-end: var(--spacing-800);
 
   @media screen and (min-width: 48em) {
     gap: var(--spacing-1000);
-    margin-bottom: var(--spacing-1000);
+    margin-block-end: var(--spacing-1000);
   }
   @media screen and (min-width: 90em) {
     gap: 7.5rem;
