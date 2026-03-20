@@ -384,6 +384,10 @@ ul {
   overflow: hidden;
   text-overflow: ellipsis;
   transition: all 0.3s ease;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 .btn--primary {
@@ -677,7 +681,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-400);
-  width: min(100%, 1050px);
+  width: min(100%, 65.625rem);
   margin: 0 auto;
 
   @media screen and (min-width: 48em) {
@@ -876,8 +880,4 @@ ul {
   gap: var(--spacing-300);
   align-items: center;
   justify-content: center;
-}
-
-body {
-  overflow-x: hidden;
 }
